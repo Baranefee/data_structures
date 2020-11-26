@@ -134,8 +134,11 @@ void cikar(Sopa* _sopaIsim){
 	
 }
 
-void yazdir(){
-	
+void yazdir(Sopa* _sopaIsim){
+	//baslangýç durumu 
+	// A||3 	2		1
+	//B ||-		-		-
+	//C ||-		-		-
 	
 	
 
