@@ -10,15 +10,16 @@ struct sopa{
 	int veri;
 	struct sekil *ilk;
 	struct sekil *next;
+	struct sekil *prev;
 };
 
 typedef struct sekil Sekil;
 
 typedef struct sopa Sopa;
 
-void ekle(char _cubukIsim, int _diskBoyut, Sekil*start);
-void cikar();
-void yazdir();
+void ekle(char _cubukIsim, int _diskBoyut, Sekil*start) ;
+void cikar(Sopa* _sopaIsim) ;
+void yazdir(Sopa* _sopaIsim) ;
 
 int main(void) {
 	
@@ -45,7 +46,7 @@ int main(void) {
 	
 
 	
-    ekle(sopa_A,Sekil,2);
+    //ekle(sopa_A,Sekil,2);
 
  return 0 ;
 }
@@ -61,7 +62,8 @@ void ekle(Sopa * _sopaIsim, Sekil*_sekil, Sekil*start){
 	if((_cubukIsim->veri)==0){
 		
 		_sopaIsim->ilk = _sekil	;
-		(_sopaIsim->)=NULL;
+		(_sopaIsim->next)=NULL;
+		(_sopaIsim->prev)=NULL;
 		_sopaIsim->veri = veri++ ;
 		
 	}
@@ -75,6 +77,7 @@ void ekle(Sopa * _sopaIsim, Sekil*_sekil, Sekil*start){
 		else{
 			_sekil->next = NULL,
 			(_sopaIsim->ilk)->next = _sekil ;
+			(_sekil->prev) = (_sopaIsim->);
 			_sopaIsim->veri = veri++ ;
 		}
 	}
@@ -85,16 +88,47 @@ void ekle(Sopa * _sopaIsim, Sekil*_sekil, Sekil*start){
 			tutucu=tutucu->next ;
 		}
 		tutucu->next = _sekil ;
-		_sopaIsim->veri = veri++;
+		(_sekil->prev) = tutucu ;
+		_sopaIsim->veri = veri++ ;
 	}
 	
 }
 
 
-void cikar(){
+void cikar(Sopa* _sopaIsim){
+	Sekil * sekilTut = (_sopaIsim->ilk);
+	while((sekilTut->next)!=null){
+		sekilTut =  sekilTut->next ;
+		
+	}
+	
+	if((_sopaIsim->veri) == 3){
+		(sekilTut->prev)->next = NULL ;
+		(sekilTut->next) = NULL ;
+		(sekilTut->prev) = NULL ;
+	}
 	
 	
+	else if((_sopaIsim->veri) == 2) {
+		
+		(sekilTut->prev)->next = NULL ; 
+		sekilTut->next = NULL;
+	    sekilTut->prev = NULL;
+	    _sopaIsim->veri = veri-1 ;
 	
+	
+	}
+	
+	
+	else{
+		_sopaIsim->ilk = NULL ;
+		sekilTut->next = NULL ;
+		sekilTut->prev = NULL ;
+		_sopaIsim->veri  = veri-1 ;
+		
+		
+		
+	}
 	
 	
 	
@@ -104,10 +138,27 @@ void yazdir(){
 	
 	
 	
+
 	
+	if((_sopaIsim->veri) == 0){
+		printf("\n%c||- 	- 		-",_sopaIsim->isim);
+		
+	}
 	
+	else if ((_sopaIsim->veri) == 1){
+		printf("\n%c||%d 		- 		-",_sopa_Isim, (_sopaIsim->ilk)->boyut);
+		
+	}
 	
+	else if (( _sopaIsim->veri) == 2){
+		Sekil *printer =_(sopaIsim->ilk)->next ;
+		printf("\n%c||%d 		%d 		-",_sopaIsim->isim, (_sopaIsim->ilk)->boyut,printer->boyut);
+	}
+	else ((_sopaIsim) == 3){
 	
+		Sekil *printer =_(sopaIsim->ilk)->next ;
+	    printf("\n%c||%d 		%d 		%d",_sopaIsim->isim, (_sopaIsim))
+    }
 	
 }
 
