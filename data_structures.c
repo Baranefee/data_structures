@@ -17,54 +17,15 @@ typedef struct sekil Sekil;
 
 typedef struct sopa Sopa;
 
-void ekle(char _cubukIsim, int _diskBoyut, Sekil*start) ;
-void cikar(Sopa* _sopaIsim) ;
-void yazdir(Sopa* _sopaIsim) ;
-
-int main(void) {
-	
-	Sekil  *sekil_1;
-	Sekil  *sekil_2;
-	Sekil  *sekil_3;
-	
-	sekil_1->boyut=1;	
-	sekil_2->boyut=2;	
-	sekil_3->boyut=3;
-	
-	Sopa *sopa_A;
-	Sopa *sopa_B;
-	Sopa *sopa_C;
-	
-	sopa_A-> isim = 'A';
-	sopa_A->veri = 0;
-		
-	sopa_B-> isim = 'B';
-	sopa_B-> veri = 0;
-    
-    sopa_C->isim = 'C';
-    sopa_C->veri = 0;
-	
-
-	
-    //ekle(sopa_A,Sekil,2);
-
- return 0 ;
-}
-
+void ekle(Sopa * _sopaIsim, Sekil*_sekil){
 	
 	
-
-
-
-void ekle(Sopa * _sopaIsim, Sekil*_sekil, Sekil*start){
-	
-	
-	if((_cubukIsim->veri)==0){
+	if((_sopaIsim->veri)==0){
 		
 		_sopaIsim->ilk = _sekil	;
 		(_sopaIsim->next)=NULL;
 		(_sopaIsim->prev)=NULL;
-		_sopaIsim->veri = veri++ ;
+		(_sopaIsim->veri)= veri++ ;
 		
 	}
 	
@@ -160,8 +121,78 @@ void yazdir(Sopa* _sopaIsim){
 	else ((_sopaIsim) == 3){
 	
 		Sekil *printer =_(sopaIsim->ilk)->next ;
-	    printf("\n%c||%d 		%d 		%d",_sopaIsim->isim, (_sopaIsim))
+	    printf("\n%c||%d 		%d 		%d 		1",_sopaIsim->isim, (_sopaIsim))
     }
 	
 }
+
+
+
+int main(void) {
+	
+	Sekil  *sekil_1;
+	Sekil  *sekil_2;
+	Sekil  *sekil_3;
+	
+	sekil_1->boyut=1;	
+	sekil_2->boyut=2;	
+	sekil_3->boyut=3;
+	
+	Sopa *sopa_A;
+	Sopa *sopa_B;
+	Sopa *sopa_C;
+	
+	sopa_A-> isim = 'A';
+	sopa_A->veri = 0;
+		
+	sopa_B-> isim = 'B';
+	sopa_B-> veri = 0;
+    
+    sopa_C->isim = 'C';
+    sopa_C->veri = 0;
+
+	void ekle(Sopa ** _sopa_A, Sekil**_sekil_3);
+	void ekle(Sopa ** _sopa_A, Sekil**_sekil_2);
+	void ekle(Sopa ** _sopa_A, Sekil**_sekil_1);
+	
+	void yazdir(Sopa** _sopa_A) ;
+	void yazdir(Sopa**_sopa_B ;
+	void yazdir(Sopa** _sopa_C) ;
+	
+	
+	void cikar(Sopa** _sopa_A) ;
+	void ekle(Sopa ** _sopa_C, Sekil**_sekil_1);
+	
+	void cikar(Sopa** _sopa_A) ;
+	void ekle(Sopa ** _sopa_B, Sekil**_sekil_2);
+	
+	void cikar(Sopa** _sopa_C) ;
+	void ekle(Sopa ** _sopa_B, Sekil**_sekil_2);
+	
+	void cikar(Sopa** _sopa_A) ;
+	void ekle(Sopa **_sopa_C, Sekil**_sekil_3);
+	
+	void cikar(Sopa** _sopa_B) ;
+	void ekle(Sopa ** _sopa_A, Sekil**_sekil_1);
+	
+	void cikar(Sopa** _sopa_B) ;
+	void ekle(Sopa ** _sopa_C, Sekil**_sekil_2);
+	
+	void cikar(Sopa** _sopa_A) ;
+	void ekle(Sopa ** _sopa_C, Sekil**_sekil_1);
+	
+	void yazdir(Sopa** _sopa_A) ;
+	void yazdir(Sopa** _sopa_B) ;
+	void yazdir(Sopa** _sopa_C) ;
+
+	
+    //ekle(sopa_A,Sekil,2);
+
+}
+
+	
+	
+
+
+
 
